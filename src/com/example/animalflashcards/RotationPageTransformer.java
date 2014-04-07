@@ -14,7 +14,7 @@ import android.view.View;
  * if(BUILD.VERSION.SDK_INT >= BUILD.VERSION_CODES.HONEYCOMB){
  * 	mPager.setPageTransformer(true, new RotationPageTransformer(DEGREES_BETWEEN_CARDS));
  * 	mPager.setOffscreenPageLimit(mPagerAdapter.getCount());
- * 	mPager.setPageMargin(2 * paddingOnPages);
+ * 	mPager.setPageMargin(-2 * paddingOnPages);
  * 	mPager.setClipChildren(false);
  * }
 </pre>
