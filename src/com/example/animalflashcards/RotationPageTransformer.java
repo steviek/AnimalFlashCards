@@ -30,7 +30,7 @@ public class RotationPageTransformer implements ViewPager.PageTransformer{
 	/**
 	 * Creates a RotationPageTransformer
 	 * @param degrees the inner angle between two edges in the "polygon" that the pages are on.
-	 * An acute angle means that the pages are on the inside of the shape and an obtuse angle means that they are
+	 * Note:  this will only work with obtuse angles
 	 * on the outside of the shape
 	 */
 	public RotationPageTransformer(int degrees){
@@ -40,8 +40,7 @@ public class RotationPageTransformer implements ViewPager.PageTransformer{
 	/**
 	 * Creates a RotationPageTransformer
 	 * @param degrees the inner angle between two edges in the "polygon" that the pages are on.
-	 * An acute angle means that the pages are on the inside of the shape and an obtuse angle means that they are
-	 * on the outside of the shape
+	 * Note: this will only work with obtuse angles
 	 * @param minAlpha the least faded out that the side 
 	 */
 	public RotationPageTransformer(int degrees, float minAlpha){
