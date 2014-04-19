@@ -5,17 +5,42 @@
     android:paddingLeft="@dimen/side_padding"
     android:paddingRight="@dimen/side_padding">
 
-	<FrameLayout
+	<RelativeLayout
 	    android:layout_width="match_parent"
 	    android:layout_height="match_parent"
     	android:background="@drawable/card">
+    	
+	    <TextView
+	        android:id="@+id/title"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:padding="30dp"
+	        android:textSize="30sp"
+	        android:textColor="@android:color/black"
+	        android:layout_above="@+id/imageView"
+	        android:text="Kangaroo"
+	        android:gravity="center"
+	        android:layout_marginBottom="20dp"/>
 	    
 	    <ImageView 
 	        android:id="@+id/imageView"
 	        android:layout_width="200dp"
 	        android:layout_height="200dp"
-	        android:layout_gravity="center"/>
+	        android:layout_centerInParent="true"
+	        android:scaleType="fitCenter"/>
 	    
-	</FrameLayout>
+	    <TextView
+	        android:id="@+id/subTitle"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:padding="30dp"
+	        android:textSize="30sp"
+	        android:textColor="@android:color/black"
+	        android:layout_below="@+id/imageView"
+	        android:text="Kangaroo"
+	        android:gravity="center"
+	        android:layout_marginTop="20dp"/>
+	    
+	</RelativeLayout>
 
 </FrameLayout>

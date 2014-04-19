@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Animal Flash Cards</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    
+    <string-array name="animal_names">
+        <item>L\'ours</item>
+        <item>L\'abeille</item>
+        <item>L\'élan</item>
+        <item>La grenouille</item>
+        <item>La girafe</item>
+        <item>La chèvre</item>
+        <item>L\'hippopotame</item>
+        <item>Le kangourou</item>
+        <item>Le léopard</item>
+        <item>Le lion</item>
+        <item>Le lama</item>
+        <item>Le singe</item>
+        <item>L\'orignal</item>
+        <item>L\'autruche</item>
+        <item>Le hibou</item>
+        <item>Le panda</item>
+        <item>Le paon</item>
+        <item>Le manchot</item>
+        <item>Le rhinocéros</item>
+        <item>L\'écureil</item>
+        <item>Le morse</item>
+        <item>La belette</item>
+        <item>Le yak</item>
+        <item>Le zèbre</item>
+    </string-array>
+
+</resources>
