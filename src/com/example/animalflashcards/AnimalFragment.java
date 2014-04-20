@@ -6,16 +6,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class AnimalFragment extends Fragment{
-	private static final int GIRAFFE = 0;
-	private static final int KANGAROO = 1;
-	private static final int OWL = 2;
-	private static final int PENGUIN = 3;
-	private static final int SQUIRREL = 4;
-	private static final int ZEBRA = 5;
-	
 	private ImageView mImageView;
+	private TextView title;
+	private TextView subTitle;
+	private ImageView titleFlag;
+	private ImageView subTitleFlag;
 	private int animal;
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -31,29 +29,23 @@ public class AnimalFragment extends Fragment{
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		View view = inflater.inflate(R.layout.fragment_animal, null);
 		mImageView = (ImageView) view.findViewById(R.id.imageView);
+		title = (TextView) view.findViewById(R.id.title);
+		subTitle = (TextView) view.findViewById(R.id.subTitle);
+		titleFlag = (ImageView) view.findViewById(R.id.titleFlag);
+		subTitleFlag = (ImageView) view.findViewById(R.id.subTitleFlag);
 		
-		switch(animal){
-		case GIRAFFE:
-			mImageView.setImageResource(R.drawable.giraffe);
-			break;
-		case KANGAROO:
-			mImageView.setImageResource(R.drawable.kangaroo);
-			break;
-		case OWL:
-			mImageView.setImageResource(R.drawable.owl);
-			break;
-		case PENGUIN:
-			mImageView.setImageResource(R.drawable.penguin);
-			break;
-		case SQUIRREL:
-			mImageView.setImageResource(R.drawable.squirrel);
-			break;
-		case ZEBRA:
-			mImageView.setImageResource(R.drawable.zebra);
-			break;
-		default:
+		int imgRes = Animal.getImgResources(animal);
+		if(imgRes == 0){
 			mImageView.setVisibility(View.INVISIBLE);
+		}else{
+			mImageView.setVisibility(View.VISIBLE);
+			mImageView.setImageResource(imgRes);
 		}
+		
+		title.setText(Animal.getAnimalName(getActivity(), animal, Utilities.getTopLanguage(getActivity())));
+		subTitle.setText(Animal.getAnimalName(getActivity(), animal, Utilities.getBottomLanguage(getActivity())));
+		titleFlag.setImageResource(Utilities.getFlagResource(getActivity(), Utilities.getTopLanguage(getActivity())));
+		subTitleFlag.setImageResource(Utilities.getFlagResource(getActivity(), Utilities.getBottomLanguage(getActivity())));
 		
 		return view;
 		
