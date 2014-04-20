@@ -1,4 +1,4 @@
-package com.example.animalflashcards;
+package com.sixbynine.animalflashcards;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;

@@ -1,4 +1,5 @@
-package com.example.animalflashcards;
+package com.sixbynine.animalflashcards;
+
 
 import android.content.Context;
 import android.content.SharedPreferences;

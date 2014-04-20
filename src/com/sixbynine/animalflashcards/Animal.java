@@ -1,4 +1,4 @@
-package com.example.animalflashcards;
+package com.sixbynine.animalflashcards;
 
 import java.util.Locale;
 
@@ -34,9 +34,7 @@ public class Animal {
     public static final int YAK = 22;
     public static final int ZEBRA = 23;
 	public static final int NUMBER_OF_ANIMALS = 24;
-    private static String[] animalNamesEnglish;
-    private static String[] animalNamesFrench;
-    private static String[] animalNamesSpanish;
+    private static String[][] animalNames;
     
     
     /**
@@ -98,35 +96,14 @@ public class Animal {
 		return 0;
 	}
 	
-	public static String getAnimalName(Context context, int animal, int language){
-		if(animalNamesEnglish == null || animalNamesFrench == null || animalNamesSpanish == null){
-			Resources standardResources = context.getResources();
-			AssetManager assets = standardResources.getAssets();
-			DisplayMetrics metrics = standardResources.getDisplayMetrics();
-			
-			Configuration englishConfig = new Configuration(standardResources.getConfiguration());
-			englishConfig.locale = Locale.ENGLISH;
-			Resources englishResources = new Resources(assets, metrics, englishConfig);
-			animalNamesEnglish = englishResources.getStringArray(R.array.animal_names);
-			
-			Configuration frenchConfig = new Configuration(standardResources.getConfiguration());
-			frenchConfig.locale = Locale.FRENCH;
-			Resources frenchResources = new Resources(assets, metrics, frenchConfig);
-			animalNamesFrench = frenchResources.getStringArray(R.array.animal_names);
-			
-			Configuration spanishConfig = new Configuration(standardResources.getConfiguration());
-			spanishConfig.locale = new Locale("es", "ES");
-			Resources spanishResources = new Resources(assets, metrics, spanishConfig);
-			animalNamesSpanish = spanishResources.getStringArray(R.array.animal_names);
+	public static String getAnimalName(Context context, int language, int animal){
+		if(animalNames == null){
+			animalNames = new String[Language.NUMBER_OF_LANGUAGES][Animal.NUMBER_OF_ANIMALS];
+			for(int i = 0; i < Language.NUMBER_OF_LANGUAGES; i ++){
+				animalNames[i] = Language.getResources(context, i).getStringArray(R.array.animal_names);
+			}
 			
 		}
-		switch(language){
-		case Language.FRENCH:
-			return animalNamesFrench[animal];
-		case Language.SPANISH:
-			return animalNamesSpanish[animal];
-		default:
-			return animalNamesEnglish[animal];
-		}
+		return animalNames[language][animal];
 	}
 }

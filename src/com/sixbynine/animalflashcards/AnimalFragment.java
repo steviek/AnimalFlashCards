@@ -1,4 +1,5 @@
-package com.example.animalflashcards;
+package com.sixbynine.animalflashcards;
+
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -42,8 +43,8 @@ public class AnimalFragment extends Fragment{
 			mImageView.setImageResource(imgRes);
 		}
 		
-		title.setText(Animal.getAnimalName(getActivity(), animal, Utilities.getTopLanguage(getActivity())));
-		subTitle.setText(Animal.getAnimalName(getActivity(), animal, Utilities.getBottomLanguage(getActivity())));
+		title.setText(Animal.getAnimalName(getActivity(), Utilities.getTopLanguage(getActivity()), animal));
+		subTitle.setText(Animal.getAnimalName(getActivity(), Utilities.getBottomLanguage(getActivity()), animal));
 		titleFlag.setImageResource(Utilities.getFlagResource(getActivity(), Utilities.getTopLanguage(getActivity())));
 		subTitleFlag.setImageResource(Utilities.getFlagResource(getActivity(), Utilities.getBottomLanguage(getActivity())));
 		
