@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Animal Flash Cards</string>
+    <string name="action_settings">Settings</string>
+    
+    <string-array name="animal_names">
+        <item>Bear</item>
+        <item>Bee</item>
+        <item>Elk</item>
+        <item>Frog</item>
+        <item>Giraffe</item>
+        <item>Goat</item>
+        <item>Hippo</item>
+        <item>Kangaroo</item>
+        <item>Leopard</item>
+        <item>Lion</item>
+        <item>Llama</item>
+        <item>Monkey</item>
+        <item>Moose</item>
+        <item>Ostrich</item>
+        <item>Owl</item>
+        <item>Panda</item>
+        <item>Peacock</item>
+        <item>Penguin</item>
+        <item>Rhino</item>
+        <item>Squirrel</item>
+        <item>Walrus</item>
+        <item>Weasel</item>
+        <item>Yak</item>
+        <item>Zebra</item>
+    </string-array>
+
+</resources>
