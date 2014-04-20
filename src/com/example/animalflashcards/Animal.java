@@ -37,9 +37,7 @@ public class Animal {
     private static String[] animalNamesEnglish;
     private static String[] animalNamesFrench;
     private static String[] animalNamesSpanish;
-    public enum Language{
-    	ENGLISH, FRENCH, SPANISH
-    }
+    
     
     /**
      * 
@@ -100,7 +98,7 @@ public class Animal {
 		return 0;
 	}
 	
-	public static String getAnimalName(Context context, int animal, Language language){
+	public static String getAnimalName(Context context, int animal, int language){
 		if(animalNamesEnglish == null || animalNamesFrench == null || animalNamesSpanish == null){
 			Resources standardResources = context.getResources();
 			AssetManager assets = standardResources.getAssets();
@@ -123,9 +121,9 @@ public class Animal {
 			
 		}
 		switch(language){
-		case FRENCH:
+		case Language.FRENCH:
 			return animalNamesFrench[animal];
-		case SPANISH:
+		case Language.SPANISH:
 			return animalNamesSpanish[animal];
 		default:
 			return animalNamesEnglish[animal];
