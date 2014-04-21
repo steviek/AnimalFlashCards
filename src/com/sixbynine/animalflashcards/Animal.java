@@ -1,12 +1,6 @@
 package com.sixbynine.animalflashcards;
 
-import java.util.Locale;
-
 import android.content.Context;
-import android.content.res.AssetManager;
-import android.content.res.Configuration;
-import android.content.res.Resources;
-import android.util.DisplayMetrics;
 
 public class Animal {
 	public static final int BEAR = 0;
@@ -34,7 +28,11 @@ public class Animal {
     public static final int YAK = 22;
     public static final int ZEBRA = 23;
 	public static final int NUMBER_OF_ANIMALS = 24;
-    private static String[][] animalNames;
+    private static final String[][] animalNames = {
+    	{"Bear","Bee","Elk","Frog","Giraffe","Goat","Hippo","Kangaroo","Leopard","Lion","Llama","Monkey","Moose","Ostrich","Owl","Panda","Peacock","Penguin","Rhino","Squirrel","Walrus","Weasel","Yak","Zebra"},
+    	{"L'ours","L'abeille","L'élan","La grenouille","La girafe","La chèvre","L'hippopotame","Le kangourou","Le léopard","Le lion","Le lama","Le singe","L'orignal","L'autruche","Le hibou","Le panda","Le paon","Le manchot","Le rhinocéros","L'écureil","Le morse","La belette","Le yak","Le zèbre"},
+    	{"El oso","La abeja","El wapití","La rana","La jirafa","La cabra","El hipopótamo","El canguro","El leopardo","El león","La llama","El mono","El alce","El avestruz","El búho","El panda","El pavo real","El pingüino","El rinoceronte","La ardilla","La morsa","La comadreja","El yak","La cebra"},
+    };
     
     
     /**
@@ -97,13 +95,6 @@ public class Animal {
 	}
 	
 	public static String getAnimalName(Context context, int language, int animal){
-		if(animalNames == null){
-			animalNames = new String[Language.NUMBER_OF_LANGUAGES][Animal.NUMBER_OF_ANIMALS];
-			for(int i = 0; i < Language.NUMBER_OF_LANGUAGES; i ++){
-				animalNames[i] = Language.getResources(context, i).getStringArray(R.array.animal_names);
-			}
-			
-		}
 		return animalNames[language][animal];
 	}
 }

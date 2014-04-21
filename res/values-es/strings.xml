@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Animal Flash Cards</string>
+    <string name="app_name">Flash cards de los animales</string>
     <string name="action_settings">Settings</string>
     
     <string-array name="animal_names">
@@ -31,4 +31,6 @@
         <item>Le zèbre</item>
     </string-array>
 
+    <string name="choose_language_prompt">Por favor seleccione un idioma</string>
+    
 </resources>

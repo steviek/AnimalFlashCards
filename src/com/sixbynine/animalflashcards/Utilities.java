@@ -33,22 +33,22 @@ public class Utilities {
 	public static void saveTopLanguage(Context context, int lang){
 		SharedPreferences prefs = context.getSharedPreferences("prefs", Context.MODE_MULTI_PROCESS);
 		if(lang == Language.FRENCH){
-			prefs.edit().putString("topLang", "fr");
+			prefs.edit().putString("topLang", "fr").commit();
 		}else if(lang == Language.SPANISH){
-			prefs.edit().putString("topLang", "es");
+			prefs.edit().putString("topLang", "es").commit();
 		}else{
-			prefs.edit().putString("topLang", "en");
+			prefs.edit().putString("topLang", "en").commit();
 		}
 	}
 	
 	public static void saveBottomLanguage(Context context, int lang){
 		SharedPreferences prefs = context.getSharedPreferences("prefs", Context.MODE_MULTI_PROCESS);
 		if(lang == Language.FRENCH){
-			prefs.edit().putString("botLang", "fr");
+			prefs.edit().putString("botLang", "fr").commit();
 		}else if(lang == Language.SPANISH){
-			prefs.edit().putString("botLang", "es");
+			prefs.edit().putString("botLang", "es").commit();
 		}else{
-			prefs.edit().putString("botLang", "en");
+			prefs.edit().putString("botLang", "en").commit();
 		}
 	}
 	

@@ -31,4 +31,6 @@
         <item>Zebra</item>
     </string-array>
 
+    <string name="choose_language_prompt">Please choose a langugage</string>
+    
 </resources>

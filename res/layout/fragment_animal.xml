@@ -33,6 +33,15 @@
 	        android:gravity="center"
 	        android:layout_marginBottom="20dp"/>
 	    
+	    <com.sixbynine.animalflashcards.ui.LanguagePicker
+		    android:id="@+id/flags_chooser_top"
+		    android:layout_alignTop="@+id/titleFlag"
+		    android:layout_alignBottom="@+id/title"
+		    android:layout_centerHorizontal="true"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:visibility="gone"/>
+	    
 	    <ImageView 
 	        android:id="@+id/imageView"
 	        android:layout_width="200dp"
@@ -63,6 +72,16 @@
 	        android:src="@drawable/flag_fr"
 	        android:layout_below="@+id/subTitle"/>
 	    
+	     <com.sixbynine.animalflashcards.ui.LanguagePicker 
+		    android:id="@+id/flags_chooser_bottom"
+		    android:layout_alignBottom="@+id/subTitleFlag"
+		    android:layout_alignTop="@+id/subTitle"
+		    android:layout_centerHorizontal="true"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:visibility="gone"/>
+	    
 	</RelativeLayout>
+	
 
 </FrameLayout>
