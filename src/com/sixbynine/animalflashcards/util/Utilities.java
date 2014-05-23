@@ -1,8 +1,10 @@
-package com.sixbynine.animalflashcards;
+package com.sixbynine.animalflashcards.util;
 
 
 import android.content.Context;
 import android.content.SharedPreferences;
+
+import com.sixbynine.animalflashcards.R;
 
 public class Utilities {
 

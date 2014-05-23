@@ -1,4 +1,4 @@
-package com.sixbynine.animalflashcards;
+package com.sixbynine.animalflashcards.adapter;
 
 import android.annotation.TargetApi;
 import android.os.Build;

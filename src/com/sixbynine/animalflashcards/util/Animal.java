@@ -1,6 +1,8 @@
-package com.sixbynine.animalflashcards;
+package com.sixbynine.animalflashcards.util;
 
 import android.content.Context;
+
+import com.sixbynine.animalflashcards.R;
 
 public class Animal {
 	public static final int BEAR = 0;

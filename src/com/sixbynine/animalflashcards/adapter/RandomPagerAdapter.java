@@ -1,4 +1,6 @@
-package com.sixbynine.animalflashcards;
+package com.sixbynine.animalflashcards.adapter;
+
+import com.sixbynine.animalflashcards.ui.AnimalFragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;

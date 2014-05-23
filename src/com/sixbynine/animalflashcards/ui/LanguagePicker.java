@@ -1,7 +1,7 @@
 package com.sixbynine.animalflashcards.ui;
 
-import com.sixbynine.animalflashcards.Language;
 import com.sixbynine.animalflashcards.R;
+import com.sixbynine.animalflashcards.util.Language;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -12,11 +12,11 @@ import android.widget.LinearLayout;
 
 public class LanguagePicker extends LinearLayout{
 
+	private OnLanguagePickedListener mListener;
+	
 	public interface OnLanguagePickedListener{
 		public void onLanguagePicked(View v, int language);
 	}
-	
-	private OnLanguagePickedListener listener;
 	
 	public LanguagePicker(Context context, AttributeSet attrs) {
 		super(context, attrs);
@@ -29,8 +29,8 @@ public class LanguagePicker extends LinearLayout{
 		findViewById(R.id.btn_flag_en).setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				if(listener != null){
-					listener.onLanguagePicked(LanguagePicker.this, Language.ENGLISH);
+				if(mListener != null){
+					mListener.onLanguagePicked(LanguagePicker.this, Language.ENGLISH);
 				}
 				
 			}
@@ -39,8 +39,8 @@ public class LanguagePicker extends LinearLayout{
 		findViewById(R.id.btn_flag_fr).setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				if(listener != null){
-					listener.onLanguagePicked(LanguagePicker.this, Language.FRENCH);
+				if(mListener != null){
+					mListener.onLanguagePicked(LanguagePicker.this, Language.FRENCH);
 				}
 				
 			}
@@ -49,8 +49,8 @@ public class LanguagePicker extends LinearLayout{
 		findViewById(R.id.btn_flag_es).setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				if(listener != null){
-					listener.onLanguagePicked(LanguagePicker.this, Language.SPANISH);
+				if(mListener != null){
+					mListener.onLanguagePicked(LanguagePicker.this, Language.SPANISH);
 				}
 				
 			}
@@ -59,7 +59,7 @@ public class LanguagePicker extends LinearLayout{
 	}
 
 	public void setOnLanguagePickedListener(OnLanguagePickedListener listener) {
-		this.listener = listener;
+		this.mListener = listener;
 	}
 	
 	

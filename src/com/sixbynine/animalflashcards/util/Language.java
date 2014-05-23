@@ -1,4 +1,4 @@
-package com.sixbynine.animalflashcards;
+package com.sixbynine.animalflashcards.util;
 
 public final class Language {
 	public static final int ENGLISH = 0;

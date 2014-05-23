@@ -1,4 +1,4 @@
-package com.sixbynine.animalflashcards;
+package com.sixbynine.animalflashcards.ui;
 
 
 
@@ -7,11 +7,16 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 
-public class MainActivity extends FragmentActivity implements AnimalFragment.Callback{
+import com.sixbynine.animalflashcards.R;
+import com.sixbynine.animalflashcards.adapter.RandomPagerAdapter;
+import com.sixbynine.animalflashcards.adapter.RotationPageTransformer;
+import com.sixbynine.animalflashcards.util.Animal;
 
+public class MainActivity extends FragmentActivity implements AnimalFragment.Callback{
+	private static final int DEGREES_BETWEEN_CARDS = 165;
+	
 	private ViewPager mPager;
 	private RandomPagerAdapter mPagerAdapter;
-	private static final int DEGREES_BETWEEN_CARDS = 170;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -33,8 +38,7 @@ public class MainActivity extends FragmentActivity implements AnimalFragment.Cal
 			if(frag instanceof AnimalFragment){
 				((AnimalFragment) frag).onLanguageChanged();
 			}
-		}
-		
+		}	
 	}
 
 	@Override
@@ -44,7 +48,6 @@ public class MainActivity extends FragmentActivity implements AnimalFragment.Cal
 				((AnimalFragment) frag).onTopPickerOpened();
 			}
 		}
-		
 	}
 
 	@Override
