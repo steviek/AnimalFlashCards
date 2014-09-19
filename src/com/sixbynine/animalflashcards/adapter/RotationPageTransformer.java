@@ -59,6 +59,7 @@ public class RotationPageTransformer implements ViewPager.PageTransformer{
 			//off to the left by a lot
 			view.setRotation(0);
 			view.setAlpha(0);
+			view.setTranslationX(0);
 		}else if(position <= 1){ //[-1,1]
 			view.setTranslationX((-position) * pageWidth);
 			view.setRotation(position * (180 - degrees));
@@ -69,6 +70,7 @@ public class RotationPageTransformer implements ViewPager.PageTransformer{
 			//off to the right by a lot
 			view.setRotation(0);
 			view.setAlpha(0);
+			view.setTranslationX(0);
 		}
 	}	
 }
